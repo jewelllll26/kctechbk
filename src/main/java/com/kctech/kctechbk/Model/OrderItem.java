@@ -24,7 +24,7 @@ public class OrderItem {
         this.price = price;
     }
 
-    //Getters
+    //getters
     public Long getId() {
         return id;
     }
@@ -45,7 +45,7 @@ public class OrderItem {
         return price;
     }
 
-    //Setters
+    //setters
     public void setOrderId(Long orderId) {
         this.orderId = orderId;
     }
@@ -61,7 +61,5 @@ public class OrderItem {
     public void setPrice(double price) {
         this.price = price;
     }
-
-
-
+    
 }

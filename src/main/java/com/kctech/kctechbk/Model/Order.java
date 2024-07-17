@@ -5,57 +5,54 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-
 @Entity
-@Table(name = "ordertbl")
+@Table (name = "ordertbl")
 public class Order {
 
     @Id
-    @GeneratedValue 
-    private long id;
-    private long userid;
-    private double totalAmount;
+    @GeneratedValue
+    private Long id;
+    private Long userId;
+    private double total;
     private String status;
 
     Order(){}
 
-    public Order(long userid, double totalAmount, String status) {
-        this.userid = userid;
-        this.totalAmount = totalAmount;
+    public Order(Long userId, double total, String status) {
+        this.userId = userId;
+        this.total = total;
         this.status = status;
     }
 
-    //Getters
-    public long getId() {
+    //getters
+
+    public Long getId(){
         return id;
     }
-
-    public long getUserid() {
-        return userid;
+    public Long getUserId() {
+        return userId;
     }
 
-    public double getTotalAmount() {
-        return totalAmount;
+    public double getTotal() {
+        return total;
     }
 
     public String getStatus() {
         return status;
     }
 
-    //Setters
-    public void setUserid(long userid) {
-        this.userid = userid;
+    //setters
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
-    public void setTotalAmount(double totalAmount) {
-        this.totalAmount = totalAmount;
+    public void setTotal (double total) {
+        this.total = total;
     }
 
     public void setStatus(String status) {
         this.status = status;
     }
-
-
-
 
 }

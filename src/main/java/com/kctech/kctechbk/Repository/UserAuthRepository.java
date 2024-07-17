@@ -8,13 +8,11 @@ import com.kctech.kctechbk.Model.UserAuth;
 
 
 
-
 public interface UserAuthRepository extends JpaRepository<UserAuth, Long> {
     Optional<UserAuth> findByEmail(String email);
     Optional<UserAuth> findByUsername(String username);
     Optional<UserAuth> findByUsernameOrEmail(String email, String username);
 
-    Boolean existsByUsername(String username);
     Boolean existsByEmail(String email);
-
+    Boolean existsByUsername(String username);
 }

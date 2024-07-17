@@ -6,9 +6,9 @@ import jakarta.persistence.Id;
 
 @Entity
 public class User {
-
-@Id
-@GeneratedValue
+    
+    @Id
+    @GeneratedValue
     private Long id;
     private String name;
     private String email;
@@ -22,7 +22,7 @@ public class User {
         this.password = password;
     }
 
-    //getters 
+    //getters
     public Long getId(){
         return id;
     }
@@ -30,7 +30,7 @@ public class User {
     public String getName(){
         return name;
     }
-
+    
     public String getEmail(){
         return email;
     }
@@ -39,8 +39,7 @@ public class User {
         return password;
     }
 
-
-    //Setters
+    //setters
     public void setName(String name){
         this.name = name;
     }
@@ -52,4 +51,5 @@ public class User {
     public void setPassword(String password){
         this.password = password;
     }
+
 }

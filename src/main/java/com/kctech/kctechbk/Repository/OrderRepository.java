@@ -7,5 +7,5 @@ import com.kctech.kctechbk.Model.Order;
 
 
 public interface OrderRepository extends JpaRepository<Order, Long>{
-    
+
 }
