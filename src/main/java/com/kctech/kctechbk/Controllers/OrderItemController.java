@@ -1,12 +1,12 @@
 package com.kctech.kctechbk.Controllers;
 
 import java.util.List;
-
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.kctech.kctechbk.Model.OrderItem;
@@ -15,7 +15,11 @@ import com.kctech.kctechbk.Repository.OrderItemRepository;
 
 
 
+
+
+
 @RestController
+@RequestMapping("/api/v1/orderItem")
 public class OrderItemController {
     OrderItemRepository repo;
 
@@ -23,14 +27,12 @@ public class OrderItemController {
     public OrderItemController(OrderItemRepository repo) {
         this.repo = repo;
     } 
-
     //http://127.0.0.1/orderItem
     //Get all orderItem
     @GetMapping("/orderitem")
     public List<OrderItem> getOrderItem(){
         return repo.findAll();
     }
-
     //http:127.0.0.1:8080/order/2
     @GetMapping("/orderItem/{id}")
     public OrderItem getOrderItem(@PathVariable Long id){
@@ -51,5 +53,5 @@ public class OrderItemController {
         repo.deleteById(id);
         return "A product is deleted!";
     }
-
 }
+
